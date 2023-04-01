@@ -3,11 +3,6 @@ import getDailyArtwork from "@/services/getDailyArtwork"
 import Footer from "../main/Footer"
 import { DailyArtworkMain } from "./DailyArtworksMain"
 
-
-
-
-
-
 export function DailyArtwork(){
     const [artwork, setArtwork] = useState()
     useEffect(()=>{
@@ -19,7 +14,6 @@ export function DailyArtwork(){
         <section className="min-vh-100">
             <div className="container">
                 <br />
-                <h2 className="fs-1">DailyArtwork</h2>
                 { artwork && <DailyArtworkMain 
                                     title={artwork.data.title} 
                                     date_start={artwork.data.date_start}
