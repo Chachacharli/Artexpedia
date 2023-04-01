@@ -1,0 +1,1 @@
+export const URL_PATH = 'https://api.artic.edu/api/v1/'
