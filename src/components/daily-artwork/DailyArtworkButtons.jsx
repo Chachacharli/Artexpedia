@@ -6,13 +6,13 @@ export const DailyArtworkButtons = () => {
         <p>Share in: </p>
             <div className="w-100  gap-3  d-flex justify-content-center align-items-center ">
                     <TwitterShareButton
-                        url={'http://localhost:3000/daily-artwork'}
+                        url={'https://artexpedia.vercel.app/daily-artwork'}
                         title={'I loved this artwork!!.'}
                         >
                         <TwitterIcon size={32} round />
                     </TwitterShareButton>
                     <FacebookShareButton
-                            url={'https://github.com/next-share'}
+                            url={'https://artexpedia.vercel.app/daily-artwork'}
                             quote={'I loved this artwork!!.'}
                             >
                             <FacebookIcon size={32} round />
