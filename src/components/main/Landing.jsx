@@ -16,8 +16,6 @@ const Landing = () =>{
                 <div className='w-100 d-flex d-flex justify-content-center'>
                   <a  href="#WhatIs"className="btn btn-whatis">What is Artexpedia?</a>
                 </div>
-                
-  
             </div>
             <div id="bottom-landing"  style={{position: 'absolute', bottom: '0', left:'0', width:'100%' ,height:'100vh'}} className="d-flex d-flex align-items-end">
               

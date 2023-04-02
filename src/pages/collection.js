@@ -1,8 +1,8 @@
 
-import Artworks from '../components/Artworks/Artworks'
+import Collection from "@/components/collection/Collection";
 
 export default function Page() {
     return(
-        <Artworks></Artworks>
+        <Collection></Collection>
     );
   }

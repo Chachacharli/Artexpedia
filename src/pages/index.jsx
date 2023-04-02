@@ -1,10 +1,5 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import SectionMenu from '@/components/main/SectionMenu'
-import SectionEvents from '@/components/main/SectionEvents'
-import Landing from '@/components/main/Landing'
-import SectionAbaout from '@/components/main/SectionAbaout'
-import Footer from '@/components/main/Footer'
+import Main from '@/components/main/Main'
 
 
 export default function Home() {
@@ -16,13 +11,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      
-      <Landing></Landing>
-      <SectionMenu></SectionMenu>
-      <SectionEvents></SectionEvents>
-      <SectionAbaout></SectionAbaout>
-      <Footer></Footer>
 
+      <Main></Main>
     </>
   )
 }
