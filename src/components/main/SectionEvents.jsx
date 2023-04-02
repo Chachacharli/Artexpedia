@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { useEffect, useState } from "react"
 import {CardEvent} from "./CardEvent"
-
+import { getEvents } from "@/services/getEvents"
 
 const API_EVENTS_URL ='https://api.artic.edu/api/v1/events?limit=4'
 
@@ -66,12 +66,9 @@ const EMTY_OBJ =
  ]}
 
 const SectionEvents = () =>{
-    
     const [events, setEvents] = useState(EMTY_OBJ)
-
     useEffect(()=>{
-        fetch(API_EVENTS_URL)
-        .then(res => res.json())
+        getEvents(API_EVENTS_URL)
         .then(respose => setEvents(respose))
 
     },[])

@@ -20,6 +20,13 @@
 
 }
 
+#bottom-landing{
+    background-image: url('../../public/wavesSvg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
 /* MENU CARDS */
 
 .icon-container{

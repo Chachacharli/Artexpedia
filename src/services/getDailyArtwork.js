@@ -1,8 +1,6 @@
 
 const API_URL = 'https://api.artic.edu/api/v1/artworks/'
 
-
-
 export default function getDailyArtwork(){
     const date = new Date()
     let day = date.getDate();

@@ -3,6 +3,7 @@ import getDailyArtwork from "@/services/getDailyArtwork"
 import Footer from "../main/Footer"
 import { DailyArtworkMain } from "./DailyArtworksMain"
 
+
 export function DailyArtwork(){
     const [artwork, setArtwork] = useState()
     useEffect(()=>{

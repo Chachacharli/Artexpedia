@@ -19,8 +19,8 @@ const Landing = () =>{
                 
   
             </div>
-            <div style={{position: 'absolute', bottom: '0', left:'0', width:'100%' ,height:'100vh'}} className="d-flex d-flex align-items-end">
-              <img src={ 'wavesSvg.svg' } style={{width:'100%'}} />
+            <div id="bottom-landing"  style={{position: 'absolute', bottom: '0', left:'0', width:'100%' ,height:'100vh'}} className="d-flex d-flex align-items-end">
+              
             </div>
   
       </main>
