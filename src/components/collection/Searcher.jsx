@@ -21,10 +21,6 @@ const Searcher = () =>{
         setKeyword(e.target.value)
     }
 
-    const Push = () =>{
-        console.log(router)
-
-    }
 
     return(
         <>
@@ -32,7 +28,6 @@ const Searcher = () =>{
             <input onChange={handleChange} value={keyword} type="text" className="form-control" placeholder="Type something" aria-label="Recipient's username" aria-describedby="button-addon2"/>
             <button  className="btn btn-outline-secondary" type="submit" id="button-addon2"><i className="bi bi-search"></i></button>
         </form>
-        <button onClick={Push} className="btn btn-primary">Push me</button>
         </>
     )
 }

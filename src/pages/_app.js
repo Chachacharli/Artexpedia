@@ -38,6 +38,9 @@ function Loading(){
 }
 
 export default function App({ Component, pageProps }) {
+  useEffect(()=>{
+    require('bootstrap/dist/js/bootstrap.bundle')
+  },[])
   return( 
   <main className={poppins.className} >
     <><Component {...pageProps} /></>  
