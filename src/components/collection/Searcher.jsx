@@ -4,21 +4,20 @@ import { useRouter } from "next/router"
 
 const Searcher = () =>{
 
-    const router = useRouter()
-
+    const route = useRouter()
     const [keyword, setKeyword] = useState('')
 
 
     const handleSubmit= (e)=> {
         e.preventDefault()
-        console.log(keyword)
-        console.log(router.asPath)
-        router.push(`/collection`)
+        route.push(`/collection?q=${keyword}`)
+
 
     }
 
     const handleChange = e =>{
         setKeyword(e.target.value)
+
     }
 
 

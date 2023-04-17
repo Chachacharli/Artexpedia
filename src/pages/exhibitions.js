@@ -1,8 +1,14 @@
 
-import Artworks from '../components/Artworks/Artworks'
+import Navbar from "@/components/navbar/Navbar";
+import Exhibitions from "@/components/Exhibitions/Exhibitions";
+import Footer from "@/components/main/Footer";
 
 export default function Page() {
     return(
-        <Artworks></Artworks>
+        <>
+            <Navbar/>
+            <Exhibitions/>
+            <Footer/>
+        </>
     );
   }

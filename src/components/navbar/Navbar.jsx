@@ -1,21 +1,76 @@
 import Link from "next/link";
+import Image from "next/image";
+import LOGO from '../../../public/assets/ArtexpediaLogo.png'
 
-const Navbar = () =>{
+const LINKS = [
+    {
+        link: '/',
+        icon: 'bi-house-fill',
+        name: 'Home'
+    },
+    {
+        link: '/daily-artwork',
+        icon: 'bi-brightness-high-fill',
+        name: 'Daily Artwoks'
+    },
+    {
+        link: '/collection',
+        icon: 'bi-brush-fill',
+        name: 'Collection'
+    },
+    {
+        link: '/exhibitions',
+        icon: 'bi-columns-gap',
+        name: 'Exhibitions'
+    },
+    {
+        link: '/highlights',
+        icon: 'bi-stars',
+        name: 'Highlights'
+    }
+]
+
+
+
+const ListOfLinks = () =>{
     return(
-        <nav className="navbar navbar-expand-lg bg-body-tertiary navbar-bg">
-            <div className="container-fluid">
-            <div class="bd-navbar-toggle"><button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" className="bi" fill="currentColor" viewBox="0 0 16 16"><path fillRule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path></svg><span className="d-none fs-6 pe-1">Browse</span></button></div>
-                <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div className="navbar-nav text-light w-100 d-flex justify-content-around">
-                    <Link href={`/`} className="nav-link text-light " aria-current="page">Home</Link>
-                    <a className="nav-link text-light" href="#">Features</a>
-                    <a className="nav-link text-light" href="#" >Pricing</a>
-                    <a className="nav-link text-light" href="#">Disabled</a>
-                </div>  
-                </div>
-            </div>
-            </nav>
+        <>
+            <ul className="list-links">
+                    {LINKS.map((link) =>{
+                    return <Link key={link.name} href={`${link.link}`} className={"list-group-link fs-4"}> <i className={`${link.icon}`}></i> <span>{link.name}</span>  </Link>                            
+                })}
+            </ul>        
+        </>
     )
 }
+
+const Navbar =() =>{
+    return(
+        <>
+        <nav id="navbar" className="navbar navbar-expand-lg navbar-dark bg-dark  ">
+            <div className="" data-bs-toggle="offcanvas" href="#offcanvasNav" role="button" aria-controls="offcanvasNav">
+                <h2 style={{color:'whitesmoke'}} className="mx-5">Artexpedia</h2>
+            </div>
+        </nav>
+         
+        <div className="offcanvas offcanvas-start text-bg-dark" tabIndex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
+            <div className="offcanvas-header">
+                <h5 className="offcanvas-title fs-2" id="offcanvasExampleLabel">Artexpedia</h5>
+                <button type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div className="offcanvas-body">
+
+                <div className="offcanvas-links">
+                    <br />
+                <ListOfLinks/>
+                </div>
+
+            </div>
+      </div>
+      </>
+
+    )
+}
+
 
 export default Navbar;

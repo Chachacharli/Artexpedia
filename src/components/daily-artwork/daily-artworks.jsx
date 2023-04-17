@@ -26,7 +26,6 @@ export function DailyArtwork(){
                                     image_id={artwork.data.image_id}
                                     alt_text={artwork.data.thumbnail.alt_text}/>}  
             </div>
-            <Footer></Footer>
         </section>
     )
 }

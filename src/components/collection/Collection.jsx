@@ -1,30 +1,34 @@
 
-import { useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
 import Navbar from "../navbar/Navbar";
 import MainCollection from "./MainCollection";
 import { useRouter } from "next/router";
-
-
-const API_URL_ARTWORKS = `https://api.artic.edu/api/v1/artworks?page=2&limit=10`     
-
+import { getCollection } from "@/services/getCollection";
+import Footer from "../main/Footer";
+const API_URL_ARTWORKS_INITIAL = `https://api.artic.edu/api/v1/artworks?page=2&limit=10`     
 
 const Collection = () => {
-    const router = useRouter()
-
     const [artworks, setArtworks] = useState()  
-
+    const router = useRouter()
+    
     useEffect(()=>{
-        let ruta = router.asPath.split('q=')
-        console.log(ruta[ruta.length - 1])
-        fetch(API_URL_ARTWORKS).
-        then(res => res.json())
-        .then(response => setArtworks(response))
+        if(router.asPath === '/collection'){
+            fetch(API_URL_ARTWORKS_INITIAL).
+            then(res => res.json())
+            .then(response => setArtworks(response))
+        }else{
+            fetch(`https://api.artic.edu/api/v1/artworks/search?q=${router.asPath.split('q=').slice((router.asPath.split('q=').length -1 ))[0]}&fields=id,image_id,title,thumbnail&query[term][is_public_domain]=true`).
+            then(res => res.json())
+            .then(response => setArtworks(response))
+        
+        }            
     },[router.asPath])
 
     return(
         <>
             <Navbar></Navbar>    
             <MainCollection artworks={artworks} />
+            <Footer/>
         </>
     )
 }

@@ -8,10 +8,9 @@ export default function getDailyArtwork(){
     let year = date.getFullYear();
     let id_day = `${day}${month}${year}`
 
-    let random = Math.sin(id_day) * 10000;
-    let n2 = Math.floor((random - Math.floor(random)) * 129884) + 1;
+    console.log(id_day)
 
-    return fetch(`${API_URL}${n2}`)
+    return fetch(`${API_URL}${129884}`)
     .then(res => res.json())
     .then(response => { return response} )
 

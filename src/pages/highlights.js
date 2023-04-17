@@ -1,8 +1,11 @@
-
-import Artworks from '../components/Artworks/Artworks'
+import Highlights from "@/components/highlights/Highlights";
+import Navbar from "@/components/navbar/Navbar";
 
 export default function Page() {
     return(
-        <Artworks></Artworks>
+        <>
+        <Navbar/>
+        <Highlights/>
+        </>
     );
   }

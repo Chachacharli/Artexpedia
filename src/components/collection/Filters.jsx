@@ -1,41 +1,43 @@
 
-const Filter = ({nombre}) =>{
+
+
+const SingleFilter = ({name}) =>{
+    <>
+            <input type="checkbox" className="btn-check" id="btn-check-outlined" autoComplete="off"/>
+            <label className="btn btn-outline-primary" htmlFor="btn-check-outlined">{name}</label>    
+    </>
+} 
+
+const BtnFilters = () =>{
     return(
-        <div className="col-4">
-            <input type="checkbox" name="options-outlined" class="btn-check" id={`btn-check-outlined-${nombre}`} autocomplete="off"/>
-            <label class="btn btn-outline-primary" for={`btn-check-outlined-${nombre}`}>{nombre}</label>    
+        <div className="d-flex">
+            <button className="btn " 
+            type="button"
+            data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"> 
+                <span className="mx-2">Filters</span><i className="bi bi-filter-circle-fill"></i>
+            </button>
         </div>
+    )
+}
+
+
+const CollapseFilters = () =>{
+    return(
+        <div className="collapse px-4" id="collapseExample">
+            <input type="checkbox" className="btn-check" id="btn-check-outlined" autoComplete="off"/>
+            <label className="btn btn-outline-primary" htmlFor="btn-check-outlined">Filtro</label>
+         </div>
     )
 }
 
 
 const Filters = () =>{
     return(
-        <div className="d-flex">
-            <button className="btn " 
-            type="button" 
-            data-bs-toggle="offcanvas" 
-            data-bs-target="#offcanvasScrolling" 
-            aria-controls="offcanvasScrolling">
-                <span className="mx-2">Filters</span><i class="bi bi-filter-circle-fill"></i>
-            </button>
-
-            <div className="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-            <div className="offcanvas-header">
-                <h5 className="offcanvas-title" id="offcanvasScrollingLabel">Secciones de filtros pre-definidos</h5>
-                <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div className="offcanvas-body">
-                <p>Tipos de filtro 1</p>
-                <div className="row">
-                    <Filter nombre={'Filtro 1'} />
-                    <Filter nombre={'Filtro 2'}/>
-                </div>
-
-
-            </div>
-            </div>        
-        </div>
+        <>
+            <BtnFilters></BtnFilters>
+            <CollapseFilters></CollapseFilters>
+   
+        </>
     )
 }
 

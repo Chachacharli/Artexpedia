@@ -12,7 +12,6 @@ const MainCollection = ({artworks}) =>{
                     <hr />
                     <p className="fs-3" style={{color: 'rgba(98, 91, 113, 1)'}}>Search thousands of artworks through this section using the search bar. Try your favorite artist or style of choice.</p>
                     <Searcher></Searcher>
-                    <Filters></Filters>
                     <br />
                     <ListOfArtworks artworks={artworks}/>
 

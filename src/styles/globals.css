@@ -170,6 +170,7 @@ a{
 }
 #VortexDev{
     cursor: pointer;
+    fill: #002021;
 }
 
 .header-about{
@@ -240,4 +241,59 @@ a{
 
 .text-display{
     text-align: justify;
+}
+
+
+
+/* NAVBAR */
+
+#navbar{
+    height: 60px;
+    background-color: #002021   !important;
+    opacity: 1;
+}
+
+.offcanvas-header{
+    background-color: #002021 !important;
+
+}
+.offcanvas-body{
+    background-color: #002021 !important;
+    padding: 0 !important;
+}
+
+.list-links{
+    width: 100%;
+    gap: 10px;
+    
+}
+
+.list-group-link{
+    width: 100%;    
+    height: 50px;
+    list-style: none;
+    transition: all 0.3s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;    
+    color: whitesmoke;
+}
+
+.list-group-link > i {
+    padding-left: 10px;
+}
+
+.list-group-link:hover{
+    background-color: #19686A;
+    color: #002021;
+}
+
+
+
+ul{
+    padding: 0 !important;
+}
+
+.list-group-link > span{
+    margin-left: 5px;
 }
