@@ -1,16 +1,7 @@
 
-const API_URL_ARTWORKS_INITIAL = `https://api.artic.edu/api/v1/artworks?page=2&limit=10`     
-
-export const getCollection = (router)=>{
-    if(router.asPath === '/collection'){
-        return fetch(API_URL_ARTWORKS_INITIAL).
-        then(res => res.json())
-        .then(response => {return(response)} )
-    }else{
-        return fetch(`https://api.artic.edu/api/v1/artworks/search?q=${router.asPath.split('q=').slice((router.asPath.split('q=').length -1 ))[0]}&fields=id,image_id,title,thumbnail
-        `).
-        then(res => res.json())
-        .then(response => {return(response)})
-    
-    }
+export const getData = (endpoint, page ,query) => {
+    const PUBLIC_DOMAIN = '&query[term][is_public_domain]=true'
+    return fetch(`https://api.artic.edu/api/v1/${endpoint}/search?q=${query}?&from=${page}&size=12$&fields=id,image_id,title,thumbnail${PUBLIC_DOMAIN}`)
+    .then( res => res.json())
+    .then(response => (response))
 }

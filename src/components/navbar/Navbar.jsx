@@ -2,35 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import LOGO from '../../../public/assets/ArtexpediaLogo.png'
 
-const LINKS = [
-    {
-        link: '/',
-        icon: 'bi-house-fill',
-        name: 'Home'
-    },
-    {
-        link: '/daily-artwork',
-        icon: 'bi-brightness-high-fill',
-        name: 'Daily Artwoks'
-    },
-    {
-        link: '/collection',
-        icon: 'bi-brush-fill',
-        name: 'Collection'
-    },
-    {
-        link: '/exhibitions',
-        icon: 'bi-columns-gap',
-        name: 'Exhibitions'
-    },
-    {
-        link: '/highlights',
-        icon: 'bi-stars',
-        name: 'Highlights'
-    }
-]
-
-
+import { LINKS } from "@/utils/Links";
 
 const ListOfLinks = () =>{
     return(

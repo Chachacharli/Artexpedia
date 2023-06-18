@@ -23,7 +23,7 @@ const Searcher = () =>{
 
     return(
         <>
-        <form onSubmit={handleSubmit} className="input-group mb-3">
+        <form onSubmit={handleSubmit} className="input-group mb-3 my-5">
             <input onChange={handleChange} value={keyword} type="text" className="form-control" placeholder="Type something" aria-label="Recipient's username" aria-describedby="button-addon2"/>
             <button  className="btn btn-outline-secondary" type="submit" id="button-addon2"><i className="bi bi-search"></i></button>
         </form>

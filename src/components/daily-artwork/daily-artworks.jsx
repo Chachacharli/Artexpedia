@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import getDailyArtwork from "@/services/getDailyArtwork"
-import Footer from "../main/Footer"
+import Footer from "../Footer/Footer"
 import { DailyArtworkMain } from "./DailyArtworksMain"
 
 

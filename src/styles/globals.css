@@ -297,3 +297,120 @@ ul{
 .list-group-link > span{
     margin-left: 5px;
 }
+
+
+/*
+SPINNER
+*/
+
+.lds-circle {
+    display: inline-block;
+    transform: translateZ(1px);
+  }
+  .lds-circle > div {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    background: #002021;
+    animation: lds-circle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  }
+  @keyframes lds-circle {
+    0%, 100% {
+      animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+    }
+    0% {
+      transform: rotateY(0deg);
+    }
+    50% {
+      transform: rotateY(1800deg);
+      animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+    }
+    100% {
+      transform: rotateY(3600deg);
+    }
+  }
+
+
+
+  /* COLLECTION */
+  #list-artworks{
+    grid-template-rows: masonry ;
+  }
+  
+  /* EXHIBITIONS */
+  .card-exhibition{
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  .card-exhibition:hover{
+    filter: opacity(0.8);
+  }
+
+  #logo-svg:hover{
+    cursor: pointer;
+  }
+
+  .vortex-footer{
+    color: #002021;
+  }
+  .vortex-footer:hover{
+    color: #19686A;
+  }
+  body{
+    overflow-x: hidden;
+  }
+
+  /* Not found Icon */ 
+
+  .my-masonry-grid {
+    display: -webkit-box; /* Not needed if autoprefixing */
+    display: -ms-flexbox; /* Not needed if autoprefixing */
+    display: flex;
+    margin-left: -30px; /* gutter size offset */
+    width: auto;
+  }
+  .my-masonry-grid_column {
+    padding-left: 40px; /* gutter size */
+    background-clip: padding-box;
+  }
+  
+  /* Style your items */
+  .my-masonry-grid_column > div { /* change div to reference your elements you put in <Masonry> */
+    background: grey;
+    margin-bottom: 50px;
+  }
+
+  .card-collection{
+    border: none !important;
+    transition: 0.3s;
+  }
+ 
+.card-collection:hover{
+    border: none !important;
+    filter: opacity(0.8);
+    color: #19686A;
+} 
+
+.link-collection{
+    color: #002021;
+}
+
+
+@media (max-width: 767px) {
+    .image-id-container > img{
+        max-width: 300px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .image-id-container > img{
+        max-width: 500px;
+    }   }   
+
+@media (min-width: 1024px) {
+    .image-id-container > img{
+        max-width: 500px;
+    }   
+  }
