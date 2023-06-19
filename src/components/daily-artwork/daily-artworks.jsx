@@ -1,31 +1,22 @@
-import { useEffect, useState } from "react"
-import getDailyArtwork from "@/services/getDailyArtwork"
-import Footer from "../Footer/Footer"
-import { DailyArtworkMain } from "./DailyArtworksMain"
+import Spiner from "../Spiner/Spiner"
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 
 
 export function DailyArtwork(){
-    const [artwork, setArtwork] = useState()
-    useEffect(()=>{
-        getDailyArtwork()
-        .then(art => setArtwork(art))
-    },[])
+
+    const router = useRouter();
+
+    const randomNumber = Math.floor(Math.random() * 119797) + 1;
+
+    useEffect(() => {
+        router.replace(`/collection/${randomNumber}`);
+      }, []);
     
+
     return(
         <section className="min-vh-100">
-            <div className="container">
-                <br />
-                { artwork && <DailyArtworkMain 
-                                    title={artwork.data.title} 
-                                    date_start={artwork.data.date_start}
-                                    date_end={artwork.data.date_end}
-                                    author={artwork.data.artist_title} 
-                                    medium_display={artwork.data.medium_display}
-                                    dimensions={artwork.data.dimensions}
-                                    department_title={artwork.data.department_title}
-                                    image_id={artwork.data.image_id}
-                                    alt_text={artwork.data.thumbnail.alt_text}/>}  
-            </div>
+            <Spiner></Spiner>
         </section>
     )
 }

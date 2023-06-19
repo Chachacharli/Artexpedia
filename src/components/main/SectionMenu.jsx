@@ -9,7 +9,7 @@ const SectionMenu = ()=>{
 
         <div className="row d-flex justify-content-center align-items-center">
 
-            <CardMenu url={'daily-artwork'} icon={'bi-brightness-high-fill'} title={'daily artwork'} subtitle={'A daily artwork'} ></CardMenu>
+            <CardMenu url={'random-artwork'} icon={'bi-shuffle'} title={'random artwork'} subtitle={'A random artwork'} ></CardMenu>
             <CardMenu url={'collection'} icon={'bi-brush-fill'} title={'collection'} subtitle={'All the artworks '}></CardMenu>
             <CardMenu url={'exhibitions'} icon={'bi-columns-gap'} title={'exhibitions'} subtitle={'Where i can find it?'}></CardMenu>
             <CardMenu url={'highlights'} icon={'bi-stars'} title={'highlights'} subtitle={'Trending now'}></CardMenu>

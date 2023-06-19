@@ -1,4 +1,5 @@
 
+
 .navbar-bg{
     background-color: #002021 !important;
     height: 50px !important;
@@ -413,4 +414,14 @@ SPINNER
     .image-id-container > img{
         max-width: 500px;
     }   
+  }
+
+  .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    background-color: #002021 !important;
+    color: white !important;
+  }
+
+.nav-link{
+    color: #002021 !important;
+    
   }

@@ -43,10 +43,8 @@ const Collection = () => {
 
     return(
         <>
-            <Navbar/>  
             {loading ? <Spiner/> : <MainCollection artworks={artworks}/>} 
             <Pagination artworks={artworks} actualPage={actualPage}  nextPage={nextPage} previousPage={previousPage} />
-            <Footer/>
         </>
     )
 }
